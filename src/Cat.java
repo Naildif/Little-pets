@@ -1,20 +1,20 @@
 public class Cat extends Animal {
-      private int lives;
+    private int lives;
 
-    public Cat(String name, int age, int lives) {
-        super(name, age);
+    public Cat(String name, String breed, int age) {
+        super(name, breed, age);
         this.lives = 9;
     }
+
     @Override
     public void makeSound() {
         System.out.println("Miam, miuau, miamiauuuu");
     }
 
     @Override
-    public void showDetails(){
-        String catName = getName();
-        int catAge = getAge();
-        System.out.println("Name: "+getName() + "\nAge: "+getAge()+ "\nLives left: "+lives);
+    public void showDetails() {
+        System.out.println("Name: " + getName() + "\nBreed: " + getBreed() +
+                "\nAge: " + getAge() + "\nNumber of lives: " + lives);
     }
 
     public void loseLives() {
@@ -24,12 +24,13 @@ public class Cat extends Animal {
     }
 
     public int getLives() {
-            return lives;
+        return lives;
     }
 
     public void setLives(int lives) {
         this.lives = lives;
     }
+
 }
 
 
